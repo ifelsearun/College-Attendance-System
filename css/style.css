@@ -1,0 +1,207 @@
+/* Global */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    background-image: url(../assets/images/cms-image.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    min-height: 100svh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main container */
+.container {
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.921);
+    min-height: 550px;
+    width: min(400px, calc(100% - 30px));
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* header */
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+}
+
+.logo i {
+    font-size: 32px;
+    color: rgb(0, 128, 255);
+}
+
+.heading {
+    font-size: 28px;
+    margin: 0;
+}
+
+.instruction {
+    color: rgba(0, 0, 0, 0.521);
+    font-size: 14px;
+}
+
+/* Login form */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: auto;
+    width: 350px;
+}
+
+/* Input */
+.input-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.221);
+    border-radius: 6.5px;
+    padding: 13px;
+    gap: 15px;
+}
+
+.input-box input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.input-box:focus-within {
+    border-color: rgb(0, 128, 255);
+    box-shadow: 0 0 0 2px rgba(0, 128, 255, 0.1);
+}
+
+.input-box i {
+    color: rgb(23, 23, 131);
+}
+
+input[type="date"] {
+    color: rgba(0, 0, 0, 0.542);
+}
+
+/* Login Button */
+.login-form button {
+    border: 1px solid rgba(0, 0, 0, 0.221);
+    border-radius: 6.5px;
+    padding: 15px;
+    background-color: rgb(0, 128, 255);
+    color: white;
+    font-size: 15px;
+
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.login-form button:hover {
+    background-color: rgb(0, 110, 220);
+}
+
+/* Divider */
+.divider {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 350px;
+    color: rgba(0, 0, 0, 0.521);
+    font-size: 13px;
+}
+
+.divider span:first-child,
+.divider span:last-child {
+    flex: 1;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.12);
+}
+
+/* Role Button */
+.role-buttons {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+}
+
+.role-buttons button {
+    flex: 1;
+    border: none;
+    border-radius: 7px;
+    height: 60px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* Role Colors */
+.student {
+    background-color: rgba(80, 176, 255, 0.171);
+    color: rgb(8, 8, 174);
+}
+
+.faculty {
+    background-color: rgba(0, 160, 51, 0.099);
+    color: rgb(0, 102, 0);
+}
+
+.advisor {
+    color: rgb(106, 0, 171);
+    background-color: rgba(131, 8, 255, 0.118);
+}
+
+/* Access Text */
+.access {
+    color: rgba(0, 0, 0, 0.521);
+}
+
+/* Keyboard Accessibility */
+.role-buttons button:focus-visible,
+form button:focus-visible {
+    outline: 3px solid rgba(0, 128, 255, 0.35);
+    outline-offset: 2px;
+}
+
+/* Accessibility */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Responsive */
+/* the rule activates if the screen size <= 500px */
+@media (max-width: 500px) {
+    .container {
+        min-height: 550px;
+        padding: 20px;
+    }
+
+    .login-form,
+    .divider,
+    .role-buttons {
+        width: 100%;
+    }
+}
